@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://60ue8ocdavnj"]
+
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_8wfeb"]
+[ext_resource type="Texture2D" uid="uid://ekt3mbswlk7y" path="res://assets/pong_bar.png" id="1_etlpr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hacwk"]
+size = Vector2(6, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_yt1eo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_etlpr")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Player" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_8wfeb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_hacwk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_yt1eo")

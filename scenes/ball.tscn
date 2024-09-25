@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1ohfadx501xl"]
+
+[ext_resource type="Script" path="res://scripts/ball.gd" id="1_211vr"]
+[ext_resource type="Texture2D" uid="uid://dxpainyx6wfdw" path="res://assets/pong_ball.png" id="1_x0htt"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u65r4"]
+radius = 8.06226
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lar5j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_x0htt")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Ball" type="CharacterBody2D"]
+script = ExtResource("1_211vr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_u65r4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lar5j")

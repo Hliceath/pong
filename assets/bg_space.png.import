@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cfr8icgc6xu1l"
-path="res://.godot/imported/pong_bar_enemy.png-8cae40f644e195d6d85799d735a30eb5.ctex"
+uid="uid://c1d76qx47plrb"
+path="res://.godot/imported/bg_space.png-756112b2fc69f42ef9edac4ba99ee415.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://pong_bar_enemy.png"
-dest_files=["res://.godot/imported/pong_bar_enemy.png-8cae40f644e195d6d85799d735a30eb5.ctex"]
+source_file="res://assets/bg_space.png"
+dest_files=["res://.godot/imported/bg_space.png-756112b2fc69f42ef9edac4ba99ee415.ctex"]
 
 [params]
 
