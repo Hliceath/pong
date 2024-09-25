@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://ca7ab1qyxol0h"]
+
+[ext_resource type="Texture2D" uid="uid://cfr8icgc6xu1l" path="res://assets/pong_bar_enemy.png" id="1_7yar5"]
+[ext_resource type="Script" path="res://scripts/enemy.gd" id="1_noxw1"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8n7wo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7yar5")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urhnh"]
+size = Vector2(6, 32)
+
+[node name="Enemy" type="CharacterBody2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_noxw1")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_8n7wo")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_urhnh")
