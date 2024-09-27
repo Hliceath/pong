@@ -5,6 +5,7 @@ var player_score: int
 
 func _ready() -> void:
 	new_game()
+	pass
 
 func is_game_over() -> bool:
 	return true if enemy_score == 3 or player_score == 3 else false
@@ -14,8 +15,6 @@ func new_game() -> void:
 	player_score = 0
 	$UI.update_score(enemy_score, player_score)
 	$Ball.reset_ball_position()
-	if $Ball.velocity.x == 0:
-		$Ball.velocity.x = 1.0 * $Ball.speed
 
 func increment_score(goal_name: String) -> void:
 	if "Enemy" in goal_name:
@@ -28,3 +27,8 @@ func increment_score(goal_name: String) -> void:
 
 	if is_game_over():
 		new_game()
+
+func hide_elements() -> void:
+	$Ball.hide()
+	$Enemy.hide()
+	$Player.hide()

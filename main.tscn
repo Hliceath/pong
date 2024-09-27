@@ -19,13 +19,15 @@ offset_bottom = 525.0
 texture = ExtResource("3_h6rbv")
 
 [node name="Ball" parent="." instance=ExtResource("3_5tq56")]
-position = Vector2(0, -23)
+position = Vector2(429, 263)
 
 [node name="Player" parent="." instance=ExtResource("1_r878t")]
 position = Vector2(790, 263)
+scale = Vector2(3, 3)
 
 [node name="Enemy" parent="." instance=ExtResource("5_cpe34")]
 position = Vector2(68, 263)
+scale = Vector2(3, 3)
 
 [node name="Top Wall" parent="." instance=ExtResource("4_mwarn")]
 

@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-var speed: float = 300.0
+var speed: float = 350.0
 var screen_size: Vector2
 
 func _ready() -> void:
